@@ -130,14 +130,14 @@ def main():
         "-s",
         "--sub-words",
         action="append",
-        env_var="GOWON_SUB_WORDS",
+        env_var="GOWON_MORELIKE_SUB_WORDS",
         default=[],
     )
     p.add(
         "-i",
         "--ignored-words",
         action="append",
-        env_var="GOWON_IGNORED_WORDS",
+        env_var="GOWON_MORELIKE_IGNORED_WORDS",
         default=[],
     )
     opts = p.parse_args()
