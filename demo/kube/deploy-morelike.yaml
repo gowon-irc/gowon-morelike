@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: morelike
+  labels:
+    app.kubernetes.io/name: morelike
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: morelike
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: morelike
+    spec:
+      containers:
+        - name: morelike
+          image: morelike
+          env:
+            - name: GOWON_BROKER_HOST
+              value: mosquitto
+            - name: GOWON_SUB_WORDS
+              value: "poo bum fart"
+            - name: GOWON_IGNORED_WORDS
+              value: "shane"

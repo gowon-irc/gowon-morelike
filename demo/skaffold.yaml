@@ -1,0 +1,13 @@
+---
+apiVersion: skaffold/v2beta23
+kind: Config
+build:
+  artifacts:
+    - image: morelike
+      context: ./..
+      docker:
+        dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+      - "kube/*"

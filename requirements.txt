@@ -1,0 +1,4 @@
+paho-mqtt==1.5.1
+ConfigArgParse==1.5.3
+pronouncing==0.2.0
+Pyphen==0.9.5
